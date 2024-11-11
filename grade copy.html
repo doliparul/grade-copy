@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <span>Bangla</span>
+        <input type="number" id="n1">
+        <br>
+        <br>
+
+        <span>English</span>
+        <input type="number" id="n2">
+        <br>
+        <br>
+
+        <span>Math</span>
+        <input type="number" id="n3">
+        <br>
+        <br>
+
+        <button type="button" onclick="cal()" >calculate</button>
+        <br>
+        <br>
+
+        <span>total mark : 300</span>
+        <br>
+        obtain mark: <span id="r"></span>
+        <br>
+        grade : <span id="g"></span>
+
+        <br>
+        <button type="button" onclick="p()">print</button>
+
+    </form>
+
+
+    <script>
+
+        function p(){
+            window.print();
+        }
+        function cal(){
+            var ban = parseInt(document.getElementById('n1').value);
+            var eng = parseInt(document.getElementById('n2').value);
+            var mat = parseInt(document.getElementById('n3').value);
+
+            var result = ban + eng + mat;
+
+            var show = document.getElementById('r');
+
+            show.innerHTML = result;
+
+            var gshow = document.getElementById('g');
+            if(240 <= result){
+                gshow.innerHTML = 'A+';
+            }
+            else if(210<= result){
+                gshow.innerHTML = 'A';
+            }
+            else{
+                gshow.innerHTML = 'F';
+            }
+
+
+
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
